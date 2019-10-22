@@ -27,4 +27,15 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+}
+
+.registerForm form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: solid white 1px;
+    opacity: 0.9;
 }
