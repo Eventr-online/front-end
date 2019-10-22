@@ -1,3 +1,5 @@
+/* DEFAULT REACT SETTINGS */
+
 .App {
   text-align: center;
 }
@@ -19,4 +21,26 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+/* MAIN NAV */
+
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid red 2px;
+}
+
+h1.eventrLogo {
+  margin-left: 30px;
+  color: green;
+}
+
+nav {
+  margin-right: 30px;
+}
+
+nav a {
+  margin: 0 30px;
 }
