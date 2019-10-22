@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import { Route } from 'react-router-dom';
+import Register from './components/Register';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -12,6 +15,8 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
+      <Route exact path="/" component={Register} />
+      <Route exact path="/login" component={Login} />
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.registerForm {
+    width: 400px;
+    height: 350px;
+    border: solid red 5px;
+    margin: 75px auto;
+}
+
+h3 {
+    color: purple;
+}
