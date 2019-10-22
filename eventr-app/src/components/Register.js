@@ -12,7 +12,16 @@ class Register extends Component {
     render() {   
         return (
         <div className="registerForm">
-            <h3>REGISTER HERE</h3>
+            <div className="switchLinks">
+                <h2>Register</h2>
+                <h2>Login</h2>
+            </div>
+            <form>
+                <input type="text" placeholder="first name" />
+                <input type="text" placeholder="last name" />
+                <input type="text" placeholder="email" />
+                <input type="password" placeholder="password" />
+            </form>
         </div>
         );
     }
