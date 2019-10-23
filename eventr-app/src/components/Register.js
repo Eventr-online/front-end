@@ -14,8 +14,8 @@ class Register extends Component {
         return (
         <div className="registerForm">
             <div className="switchLinks">
-                <NavLink to="/">Register</NavLink>
-                <NavLink to="/login">Login</NavLink>
+                <NavLink activeClassName="activeLink" exact to="/">Register</NavLink>
+                <NavLink activeClassName="activeLink" exact to="/login">Login</NavLink>
             </div>
             <form>
                 <input type="text" placeholder="first name" />

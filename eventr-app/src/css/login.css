@@ -8,24 +8,6 @@
     box-shadow: 1px 1px 9px black;
 }
 
-.switchLinks {
-    display: flex;
-}
-
-.switchLinks div {
-    display: block;
-    color: white;
-    padding: 20px 30px;
-    width: 50%;
-    font-size: 1.2em;
-}
-
-a {
-    display: flex;
-    text-decoration: none;
-    border: solid red 2px;
-}
-
 .loginForm form {
     display: flex;
     flex-direction: column;
