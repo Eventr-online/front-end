@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import '../css/login.css';
 
 function Login() {
-    return (
-      <div className="loginForm">
-         <h2>LOGIN HERE</h2>
-      </div>
+  return (
+    <div className="loginForm">
+        <div className="switchLinks">
+            <NavLink to="/">Register</NavLink>
+            <NavLink to="/login">Login</NavLink>
+        </div>
+        <form>
+            <input type="text" placeholder="email" />
+            <input type="text" placeholder="password" />
+            <button type="onSubmit">Login</button>
+        </form>
+    </div>
     );
   }
 

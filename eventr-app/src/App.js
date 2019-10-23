@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-      <Route exact path="/" component={Register} />
-      <Route exact path="/login" component={Login} />
-    </div>
+        <Switch>
+          <Route exact path="/" component={Register} />
+          <Route exact path="/login" component={Login} />
+        </Switch>    
+      </div>
   );
 }
 

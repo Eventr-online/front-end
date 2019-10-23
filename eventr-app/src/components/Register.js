@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../css/register.css';
 
 class Register extends Component {
@@ -13,8 +14,8 @@ class Register extends Component {
         return (
         <div className="registerForm">
             <div className="switchLinks">
-                <div className="register">Register</div>
-                <div className="login">Login</div>
+                <NavLink to="/">Register</NavLink>
+                <NavLink to="/login">Login</NavLink>
             </div>
             <form>
                 <input type="text" placeholder="first name" />
