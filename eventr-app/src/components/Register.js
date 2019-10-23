@@ -21,6 +21,7 @@ class Register extends Component {
                 <input type="text" placeholder="last name" />
                 <input type="text" placeholder="email" />
                 <input type="password" placeholder="password" />
+                <button type="onSubmit">Create Event</button>
             </form>
         </div>
         );
