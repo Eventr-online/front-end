@@ -10,16 +10,18 @@
 
 .switchLinks {
     display: flex;
-    justify-content: space-evenly;
 }
 
-.switchLinks h2 {
+.switchLinks div {
+    display: block;
     color: white;
-    margin: 30px 30px 20px 30px;
+    padding: 20px 30px;
+    width: 50%;
+    font-size: 1.2em;
 }
 
-h3 {
-    color: purple;
+.login {
+    background-color: rgba(27, 27, 27, 0.493);
 }
 
 .registerForm form {
@@ -46,6 +48,19 @@ h3 {
 input::placeholder {
     color: white;
     font-family: 'Montserrat', sans-serif;
+    transition: 0.8s;
+}
+
+input:hover::-webkit-input-placeholder {
+    color: rgba(146, 146, 146, 0.322);
+    font-size: 0.5em;
+    transition: 0.8s;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: rgba(146, 146, 146, 0.322);
+    font-size: 0.5em;
+    transition: 0.8s;
 }
 
 .registerForm form button {

@@ -13,8 +13,8 @@ class Register extends Component {
         return (
         <div className="registerForm">
             <div className="switchLinks">
-                <h2>Register</h2>
-                <h2>Login</h2>
+                <div className="register">Register</div>
+                <div className="login">Login</div>
             </div>
             <form>
                 <input type="text" placeholder="first name" />
