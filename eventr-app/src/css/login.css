@@ -1,16 +1,6 @@
 .loginForm {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 400px;
-    margin: 75px auto;
-    background-color: rgba(53, 53, 53, 0.464);
-    box-shadow: 1px 1px 9px black;
-}
-
-.loginForm form {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: left;
     margin-top: 50px;
@@ -18,7 +8,7 @@
     margin-left: 40px;
 }
 
-.loginForm form input {
+.loginForm input {
     margin-bottom: 20px;
     padding: 10px;
     background: transparent;
@@ -47,7 +37,7 @@ input:focus::-webkit-input-placeholder {
     transition: 0.8s;
 }
 
-.loginForm form button {
+.loginForm button {
     margin-top: 10px;
     background-color: rgba(0, 153, 255, 0.644);
     height: 40px;
@@ -57,7 +47,7 @@ input:focus::-webkit-input-placeholder {
     transition: 0.5s;
 }
 
-.loginForm form button:hover {
+.loginForm button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(111, 0, 255);
     transition: 0.5s;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import '../css/register.css';
 
 class Register extends Component {
@@ -12,19 +11,13 @@ class Register extends Component {
 
     render() {   
         return (
-        <div className="registerForm">
-            <div className="switchLinks">
-                <NavLink activeClassName="activeLink" exact to="/">Register</NavLink>
-                <NavLink activeClassName="activeLink" exact to="/login">Login</NavLink>
-            </div>
-            <form>
+            <form className="registerForm">
                 <input type="text" placeholder="first name" />
                 <input type="text" placeholder="last name" />
                 <input type="text" placeholder="email" />
                 <input type="password" placeholder="password" />
                 <button type="onSubmit">Create Event</button>
             </form>
-        </div>
         );
     }
   }

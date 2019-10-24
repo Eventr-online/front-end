@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import Register from './components/Register';
-import Login from './components/Login';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import HomeForm from './components/HomeForm';
 
 function App() {
   return (
@@ -16,20 +14,7 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-      <Route render={({location}) => (
-        <TransitionGroup>
-          <CSSTransition
-            key={location.key}
-            timeout={3000}
-            classNames="fade"
-          >
-            <Switch location={location}>
-              <Route exact path="/" component={Register} />
-              <Route exact path="/login" component={Login} />
-            </Switch>  
-          </CSSTransition>   
-        </TransitionGroup>   
-      )} />
+      <HomeForm />
       </div>
   );
 }
