@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -16,10 +16,20 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-        <Switch>
-          <Route exact path="/" component={Register} />
-          <Route exact path="/login" component={Login} />
-        </Switch>    
+      <Route render={({location}) => (
+        <TransitionGroup>
+          <CSSTransition
+            key={location.key}
+            timeout={3000}
+            classNames="fade"
+          >
+            <Switch location={location}>
+              <Route exact path="/" component={Register} />
+              <Route exact path="/login" component={Login} />
+            </Switch>  
+          </CSSTransition>   
+        </TransitionGroup>   
+      )} />
       </div>
   );
 }
