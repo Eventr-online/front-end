@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../css/register.css';
+import { connect } from 'react-redux';
+import { registerUser } from '../actions/index';
 
 class Register extends Component {
     constructor(props) {
@@ -20,17 +22,39 @@ class Register extends Component {
         })
     }
 
+    registerAccount = event => {
+        event.preventDefault();
+
+        const { firstname, lastname, email, password } = this.state;
+
+        this.props.registerUser({
+            "firstname": firstname,
+            "lastname": lastname,
+            "email": email,
+            "password": password
+        })
+    }
+
     render() {
         return (
-            <form className="registerForm">
+            <form className="registerForm" onSubmit={this.registerAccount}>
                 <input type="text" name="firstname" placeholder="first name" onChange={this.changeHandler} />
                 <input type="text" name="lastname" placeholder="last name" onChange={this.changeHandler} />
                 <input type="text" name="email" placeholder="email" onChange={this.changeHandler}/>
                 <input type="password" name="password"placeholder="password" onChange={this.changeHandler}/>
-                <button type="onSubmit">Create Event</button>
+                <button type="submit">Create Event</button>
             </form>
         );
     }
   }
 
-export default Register;
+const mapDispatchToProps = {
+    registerUser: registerUser
+}
+
+export default(
+    connect(
+        null,
+        mapDispatchToProps
+    )(Register)
+);
