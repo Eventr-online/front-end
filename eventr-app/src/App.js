@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 import HomeForm from './components/HomeForm';
-import { useSpring, animated } from 'react-spring';
+import { initialState } from '../src/initialstate.js';
 
 function App() {
-  const props = useSpring({ opacity: 1, from: { opacity: 0 }})
+  const [ store, dispatch ] = useReducer(initialState);
   
   return (
     <div className="App">
       <div className="mainNav">
-        <animated.div style={props}>
-          <h1 className="eventrLogo">eventr</h1>
-        </animated.div>
+        <h1 className="eventrLogo">eventr</h1>
         <nav>
           <a href="#">Account</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
         </nav>
       </div>
-      <HomeForm />
+      <HomeForm store={store} dispatch={dispatch} />
       </div>
   );
 }
