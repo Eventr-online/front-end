@@ -8,10 +8,6 @@ import '../css/homeform.css';
 
 function HomeForm(props) {
 
-        const { store } = props.store;
-
-        console.log(store.user);
-
         return (
         <div className="formBackground">
             <div className="switchLinks">

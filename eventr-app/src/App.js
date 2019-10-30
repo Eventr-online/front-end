@@ -1,10 +1,8 @@
 import React, { useReducer } from 'react';
 import './App.css';
 import HomeForm from './components/HomeForm';
-import { initialState } from '../src/initialstate.js';
 
 function App() {
-  const [ store, dispatch ] = useReducer(initialState);
   
   return (
     <div className="App">
@@ -16,7 +14,7 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-      <HomeForm store={store} dispatch={dispatch} />
+      <HomeForm />
       </div>
   );
 }

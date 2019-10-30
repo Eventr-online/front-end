@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-
+import reducer from './reducers/reducer';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -29,4 +29,3 @@ ReactDOM.render(
     </Provider>, 
     document.getElementById('root')
     );
-g
