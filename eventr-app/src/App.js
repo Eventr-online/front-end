@@ -1,6 +1,9 @@
 import React, { useReducer } from 'react';
 import './App.css';
 import HomeForm from './components/HomeForm';
+import TypeOfEvent from './components/TypeOfEvent';
+import { Route, Switch, withRouter } from 'react-router-dom';
+
 
 function App() {
   
@@ -15,6 +18,7 @@ function App() {
         </nav>
       </div>
       <HomeForm />
+      <Route exact path="/eventstart" component={TypeOfEvent} />
       </div>
   );
 }

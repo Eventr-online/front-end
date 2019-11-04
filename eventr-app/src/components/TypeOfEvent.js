@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Route, Switch, withRouter } from 'react-router-dom';
-import '../..eventcss/typeofevent.css';
 
 class TypeOfEvent extends Component {
     constructor() {
@@ -15,6 +14,7 @@ class TypeOfEvent extends Component {
     render() {
         return (
         <div className="selectEvent">
+            <h1>HEY PLEASE WORK</h1>
             <Route render={({location}) => (
                 <TransitionGroup>
                 <CSSTransition
