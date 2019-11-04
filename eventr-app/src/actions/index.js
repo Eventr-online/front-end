@@ -1,9 +1,10 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 // export action types
 
 export const REGISTERING_USER = 'REGISTERING_USER';
 export const REGISTERED_USER = 'REGISTERED_USER';
+export const FAILED_REGISTER = 'FAILED_REGISTER';
 
 
 // register user function
@@ -16,6 +17,14 @@ export function registerUser(payload) {
 
         dispatch({ type: REGISTERING_USER });
 
-        return dispatch({ type: REGISTERED_USER, payload });
-    }
+        return axios.post(`https://eventr-server.herokuapp.com/api/users/register`, payload)
+          .then((response) => {
+            dispatch({ type: REGISTERED_USER, payload: response.data });
+          })
+    
+          .catch((error) => {
+            dispatch({ type: FAILED_REGISTER, payload: error })
+          })
+    
+          }
 }

@@ -33,6 +33,16 @@ class Register extends Component {
             "email": email,
             "password": password
         })
+
+        // successful register prompts to login screen 
+
+        .then(() => {
+            this.props.history.push("/login")
+              
+        })
+        .catch((err) => {
+            console.error(err)
+    })
     }
 
     render() {

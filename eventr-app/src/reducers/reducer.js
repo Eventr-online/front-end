@@ -1,6 +1,7 @@
 import {
     REGISTERING_USER,
-    REGISTERED_USER
+    REGISTERED_USER,
+    FAILED_REGISTER
 } from '../actions/index';
 
 let initialState = {
@@ -37,11 +38,18 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: {
-                    firstname: action.payload.firstname,
-                    lastname: action.payload.lastname,
-                    email: action.payload.email,
-                    password: action.payload.password
+                    firstname: action.payload.user.firstname,
+                    lastname: action.payload.user.lastname,
+                    email: action.payload.user.email,
+                    password: action.payload.user.password
                 }
+            }
+        }
+
+        case FAILED_REGISTER: {
+            return {
+                ...state,
+                error: action.payload.error
             }
         }
         
