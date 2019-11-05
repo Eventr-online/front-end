@@ -16,7 +16,9 @@ class TypeOfEvent extends Component {
     render() {
         return (
         <div className="eventStarter">
-            <h2>Welcome {this.props.firstname}</h2>
+            <div className="textwrapper">
+                <h2>Let's plan your event, {this.props.firstname}!</h2>
+            </div>
             <div className="selectEvent">
                 <div className="eventType">
                     Private

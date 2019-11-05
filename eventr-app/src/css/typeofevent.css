@@ -1,7 +1,15 @@
+.eventStarter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 50px auto;
+}
+
 .selectEvent {
     display: flex;
-    margin: 150px auto;
-    width: 50%;
+    width: 95%;
+    margin-top: 30px;
     justify-content: space-between;
 }
 
@@ -14,4 +22,18 @@
     font-size: 2em;
     color: blueviolet;
     border: solid blue 2px;
+}
+
+.textwrapper { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(102, 0, 88, 0.564);
+    width: 500px;
+    height: 60px;
+    border-radius: 25px;
+}
+.eventStarter h2 {
+    font-size: 2.1em;
+    color: whitesmoke;
 }
