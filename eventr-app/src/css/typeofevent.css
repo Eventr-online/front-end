@@ -1,0 +1,17 @@
+.selectEvent {
+    display: flex;
+    margin: 150px auto;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.eventType {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 125px;
+    font-size: 2em;
+    color: blueviolet;
+    border: solid blue 2px;
+}
