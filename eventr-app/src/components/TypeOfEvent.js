@@ -14,7 +14,7 @@ class TypeOfEvent extends Component {
     render() {
         return (
         <div className="selectEvent">
-            <h1>HEY PLEASE WORK</h1>
+            <h1>HEY PLEASE WORK GET</h1>
             <Route render={({location}) => (
                 <TransitionGroup>
                 <CSSTransition

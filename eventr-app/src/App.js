@@ -17,7 +17,10 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-      <HomeForm />
+      <Switch>
+        <Route exact path="/" component={HomeForm} />
+        <Route exact path="/login" component={HomeForm} />
+      </Switch> 
       <Route exact path="/eventstart" component={TypeOfEvent} />
       </div>
   );
