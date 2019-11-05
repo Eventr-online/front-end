@@ -28,12 +28,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(102, 0, 88, 0.564);
     width: 500px;
     height: 60px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 .eventStarter h2 {
     font-size: 2.1em;
     color: whitesmoke;
+    text-shadow:
+		-1px -1px 0 rgb(75, 0, 62),
+		1px -1px 0 rgb(75, 0, 62),
+		-1px 1px 0 rgb(75, 0, 62),
+        1px 1px 0 rgb(75, 0, 62)
 }

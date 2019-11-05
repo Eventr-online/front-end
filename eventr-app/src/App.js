@@ -3,6 +3,7 @@ import './App.css';
 import HomeForm from './components/HomeForm';
 import TypeOfEvent from './components/TypeOfEvent';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
 function App() {
@@ -17,12 +18,24 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-      <Switch>
-        <Route exact path="/" component={HomeForm} />
-        <Route exact path="/login" component={HomeForm} />
-      </Switch> 
-      <Route exact path="/eventstart" component={TypeOfEvent} />
-      </div>
+      <Route render={({location}) => (
+          <TransitionGroup>
+            <CSSTransition
+                key={location.key}
+                timeout={3000}
+                classNames="fade"
+            >
+                <Switch location={location}>
+                  <Switch>
+                    <Route exact path="/" component={HomeForm} />
+                    <Route exact path="/login" component={HomeForm} />
+                  </Switch> 
+                  <Route exact path="/eventstart" component={TypeOfEvent} />
+                </Switch>  
+            </CSSTransition>   
+          </TransitionGroup>   
+       )} />
+    </div>
   );
 }
 
