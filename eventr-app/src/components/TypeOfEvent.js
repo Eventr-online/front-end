@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { Route, Switch, withRouter } from 'react-router-dom';
 import '../css/typeofevent.css';
 import { connect } from 'react-redux';
 import { addEventType } from '../actions/index';
@@ -17,18 +14,17 @@ class TypeOfEvent extends Component {
     makePrivateEvent = event => {
         event.preventDefault();
 
-        addEventType('private')
-            .then(() => {
-                this.props.history.push("/eventbuilder")
-                
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+        this.props.addEventType('private');
+
+        this.props.history.push('/eventcreate')
     }
 
     makePublicEvent = event => {
         event.preventDefault();
+
+        this.props.addEventType('public');
+
+        this.props.history.push('/eventcreate')
     }
 
 
@@ -39,10 +35,10 @@ class TypeOfEvent extends Component {
                 <h2>Let's plan your event, {this.props.firstname}!</h2>
             </div>
             <div className="selectEvent">
-                <button onSubmit={this.makePrivateEvent} className="eventType">
+                <button onClick={this.makePrivateEvent} className="eventType">
                     Private
                 </button>
-                <button className="eventType">
+                <button onClick={this.makePublicEvent} className="eventType">
                     Public
                 </button>
             {/* <Route render={({location}) => (

@@ -6,6 +6,7 @@ import {
     ADDED_EVENT_TYPE
 } from '../actions/index';
 
+
 let initialState = {
     user: {
         firstname: '',
@@ -22,11 +23,11 @@ let initialState = {
 
 /* persistent storage */
 
-const persistedState = localStorage.getItem('reduxState');
+// const persistedState = localStorage.getItem('reduxState');
 
-if (persistedState) {
-    initialState = JSON.parse(persistedState)
-}
+// if (persistedState) {
+//     initialState = JSON.parse(persistedState)
+// }
 
 /* reducer */
 
@@ -43,6 +44,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: {
+                    ...state.user,
                     firstname: action.payload.user.firstname,
                     lastname: action.payload.user.lastname,
                     email: action.payload.user.email,
@@ -68,9 +70,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: {
-                     events: {
-                         type: action.payload
-                     }
+                    ...state.user,
+                    events: {
+                        ...state.user.events,
+                        type: action.payload
+                    }
                 }
             }
         }

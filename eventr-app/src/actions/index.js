@@ -35,8 +35,6 @@ export function addEventType(payload) {
 
   return dispatch => {
 
-    dispatch({ type: ADDING_EVENT_TYPE });
-
-    return dispatch({ type: ADDED_EVENT_TYPE, payload })
+    dispatch({ type: ADDED_EVENT_TYPE, payload })
   }
 }
