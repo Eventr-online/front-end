@@ -1,7 +1,9 @@
 import {
     REGISTERING_USER,
     REGISTERED_USER,
-    FAILED_REGISTER
+    FAILED_REGISTER,
+    ADDING_EVENT_TYPE,
+    ADDED_EVENT_TYPE
 } from '../actions/index';
 
 let initialState = {
@@ -9,10 +11,13 @@ let initialState = {
         firstname: '',
         lastname: '',
         email: '',
-        password: ''
-
+        password: '',
+        events: {
+            type: '',
+            name: 'No Name Event'
+        }
     },
-    token: ''
+    token: '',
 }
 
 /* persistent storage */
@@ -50,6 +55,23 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload.error
+            }
+        }
+
+        case ADDING_EVENT_TYPE: {
+            return {
+                ...state
+            }
+        }
+
+        case ADDED_EVENT_TYPE: {
+            return {
+                ...state,
+                user: {
+                     events: {
+                         type: action.payload
+                     }
+                }
             }
         }
         

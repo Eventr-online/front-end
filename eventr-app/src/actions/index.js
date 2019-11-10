@@ -5,6 +5,8 @@ import axios from 'axios';
 export const REGISTERING_USER = 'REGISTERING_USER';
 export const REGISTERED_USER = 'REGISTERED_USER';
 export const FAILED_REGISTER = 'FAILED_REGISTER';
+export const ADDING_EVENT_TYPE = 'ADDING_EVENT_TYPE';
+export const ADDED_EVENT_TYPE = 'ADDED_EVENT_TYPE';
 
 
 // register user function
@@ -27,4 +29,14 @@ export function registerUser(payload) {
           })
     
           }
+}
+
+export function addEventType(payload) {
+
+  return dispatch => {
+
+    dispatch({ type: ADDING_EVENT_TYPE });
+
+    return dispatch({ type: ADDED_EVENT_TYPE, payload })
+  }
 }

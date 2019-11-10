@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import '../css/typeofevent.css';
 import { connect } from 'react-redux';
+import { addEventType } from '../actions/index';
 
 
 class TypeOfEvent extends Component {
@@ -13,6 +14,24 @@ class TypeOfEvent extends Component {
         }
     }
 
+    makePrivateEvent = event => {
+        event.preventDefault();
+
+        addEventType('private')
+            .then(() => {
+                this.props.history.push("/eventbuilder")
+                
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    makePublicEvent = event => {
+        event.preventDefault();
+    }
+
+
     render() {
         return (
         <div className="eventStarter">
@@ -20,12 +39,12 @@ class TypeOfEvent extends Component {
                 <h2>Let's plan your event, {this.props.firstname}!</h2>
             </div>
             <div className="selectEvent">
-                <div className="eventType">
+                <button onSubmit={this.makePrivateEvent} className="eventType">
                     Private
-                </div>
-                <div className="eventType">
+                </button>
+                <button className="eventType">
                     Public
-                </div>
+                </button>
             {/* <Route render={({location}) => (
                 <TransitionGroup>
                 <CSSTransition
@@ -52,9 +71,13 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = {
+    addEventType: addEventType
+}
+
 export default(
     connect(
         mapStateToProps,
-        null
+        mapDispatchToProps
     )(TypeOfEvent)
 );
