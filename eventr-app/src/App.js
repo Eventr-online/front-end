@@ -18,23 +18,11 @@ function App() {
           <a href="#">Contact</a>
         </nav>
       </div>
-      <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition
-                key={location.key}
-                timeout={3000}
-                classNames="fade"
-            >
-                <Switch location={location}>
-                  <Switch>
-                    <Route exact path="/" component={HomeForm} />
-                    <Route exact path="/login" component={HomeForm} />
-                  </Switch> 
-                  <Route exact path="/eventstart" component={TypeOfEvent} />
-                </Switch>  
-            </CSSTransition>   
-          </TransitionGroup>   
-       )} />
+        <Switch>
+          <Route exact path="/" component={HomeForm} />
+          <Route exact path="/login" component={HomeForm} />
+        </Switch> 
+        <Route exact path="/eventstart" component={TypeOfEvent} />
     </div>
   );
 }
