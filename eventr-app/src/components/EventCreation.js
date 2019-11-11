@@ -8,25 +8,23 @@ import { useTransition, animated } from 'react-spring';
 
 function EventCreation() {
 
-    const { location } = useContext(__RouterContext);
-    const transitions = useTransition(location, location => location.pathname, {
-        from: { opacity: 0, transform: "translate(100%, 0)" },
-        enter: { opacity: 1, transform: "translate(0, 100%)" },
-        leave: { opacity: 0, transform: "translate(-50%, 0)" },
-    })
-
     return (
-        <div className="eventcreatebox">
-            {transitions.map(({ item, props, key }) => (
-                <animated.div key={key} style={props}>
-                    <Switch location={item}>
+            <Route render={({location}) => (
+                <TransitionGroup>
+                    <CSSTransition
+                        key={location.key}
+                        timeout={3000}
+                        classNames="fade"
+                    >
+                        <Switch location={location}>
                         <Route exact path="/eventcreate" component={Step1} />
                         <Route exact path="/step2" component={Step2} />
-                    </Switch>
-                </animated.div>         
-            ))}                    
-        </div>
-    );
-}
+                        </Switch>  
+                    </CSSTransition>   
+                </TransitionGroup>   
+            )} />       
+        );
+    }
+
 
 export default EventCreation;

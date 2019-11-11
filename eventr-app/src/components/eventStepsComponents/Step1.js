@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import AbsoluteWrapper from '../AbsoluteWrapper';
 
 
 class Step1 extends Component {
@@ -11,9 +12,11 @@ class Step1 extends Component {
 
     render() {
         return (
-        <div>
-            HEYYYYYYYYYY
-        </div>
+            <AbsoluteWrapper>
+                <div>
+                    where is everyone
+                </div>
+            </AbsoluteWrapper>
         );
     }
 }
