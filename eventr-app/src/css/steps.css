@@ -21,7 +21,6 @@
     height: 125px;
     font-size: 2em;
     color: blueviolet;
-    border: solid blue 2px;
 }
 
 .textwrapper { 
@@ -43,7 +42,6 @@
 }
 
 .stepsBlock {
-    display: flex;
     margin: 50px auto;
     width: 800px;
     background-color: purple;
@@ -52,8 +50,7 @@
 
 .position-absolute {
     position: absolute;
-}
-
-.w-100 {
-    width: 100px;
+    left: 0;
+    right: 0;
+    margin: auto
 }
