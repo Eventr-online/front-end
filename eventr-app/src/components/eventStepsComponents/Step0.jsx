@@ -3,6 +3,7 @@ import '../../css/steps.css';
 import { connect } from 'react-redux';
 import { addEventType } from '../../actions/index';
 import AbsoluteWrapper from '../AbsoluteWrapper';
+import { useSpring, useTransition, animated } from 'react-spring';
 
 
 class Step0 extends Component {
@@ -30,6 +31,7 @@ class Step0 extends Component {
 
 
     render() {
+        
         return (
             <AbsoluteWrapper>
                 <div className="stepsBlock">
