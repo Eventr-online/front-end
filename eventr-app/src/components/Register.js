@@ -37,7 +37,7 @@ class Register extends Component {
         // successful register prompts to login screen 
 
         .then(() => {
-            this.props.history.push("/eventstart")
+            this.props.history.push("/eventcreate")
               
         })
         .catch((err) => {

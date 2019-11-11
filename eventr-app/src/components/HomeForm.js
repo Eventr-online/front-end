@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import '../css/homeform.css';
 
-function HomeForm(props) {
+function HomeForm() {
 
         return (
         <div className="formBackground">

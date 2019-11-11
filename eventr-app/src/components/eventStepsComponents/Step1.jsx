@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../css/steps.css';
 import { connect } from 'react-redux';
 import AbsoluteWrapper from '../AbsoluteWrapper';
 
@@ -13,7 +14,7 @@ class Step1 extends Component {
     render() {
         return (
             <AbsoluteWrapper>
-                <div>
+                <div className="stepsBlock">
                     where is everyone
                 </div>
             </AbsoluteWrapper>
