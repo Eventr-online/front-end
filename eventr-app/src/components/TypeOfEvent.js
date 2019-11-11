@@ -32,7 +32,7 @@ class TypeOfEvent extends Component {
         return (
         <div className="eventStarter">
             <div className="textwrapper">
-                <h2>Let's plan your event, {this.props.firstname}!</h2>
+                <h2>What type of event is this, {this.props.firstname}?</h2>
             </div>
             <div className="selectEvent">
                 <button onClick={this.makePrivateEvent} className="eventType">

@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import './App.css';
 import HomeForm from './components/HomeForm';
+import EventCreation from './components/EventCreation';
 import TypeOfEvent from './components/TypeOfEvent';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/login" component={HomeForm} />
         </Switch> 
         <Route exact path="/eventstart" component={TypeOfEvent} />
+        <Route exact path="/eventcreate" component={EventCreation} />
     </div>
   );
 }
