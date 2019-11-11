@@ -42,10 +42,8 @@
 }
 
 .stepsBlock {
-    margin: 50px auto;
-    width: 800px;
-    background-color: purple;
-    color: lightblue;
+    margin: 75px auto;
+    width: 100%;
 }
 
 .position-absolute {

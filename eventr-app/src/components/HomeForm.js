@@ -11,9 +11,9 @@ function HomeForm() {
 
     const { location } = useContext(__RouterContext);
     const transitions = useTransition(location, location => location.pathname, {
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 }
+        from: { opacity: 0, transform: 'translate3d(10%,0,0)' },
+        enter: { opacity: 1, transform: 'translate3d(0%,0,0)'},
+        leave: { opacity: 0, transform: 'translate3d(-10%,0,0)' }
         });
 
         return (
