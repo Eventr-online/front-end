@@ -43,7 +43,9 @@
 
 .stepsBlock {
     margin: 75px auto;
-    width: 100%;
+    width: 800px;
+    background-color: lightcoral;
+    border: solid lightseagreen 5px;
 }
 
 .position-absolute {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import '../../css/steps.css';
 import { connect } from 'react-redux';
 import { addEventType } from '../../actions/index';
@@ -24,10 +24,13 @@ function Step0(props) {
 
         props.history.push('/step1')
     }
-    
-    const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-    const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-        
+
+    const [flipped, set] = useState(false)
+    const { transform, opacity } = useSpring({
+        opacity: flipped ? 1 : 0,
+        transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+        config: { mass: 5, tension: 500, friction: 80 }
+    })
 
         return (
             <AbsoluteWrapper>
