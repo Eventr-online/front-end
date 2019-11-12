@@ -1,0 +1,56 @@
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-top: 10px;
+    width: 320px;
+    position: absolute;
+    margin-left: 40px;
+}
+
+.registerForm input {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: solid white 1px;
+    opacity: 0.9;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.8s;
+}
+
+input:hover::-webkit-input-placeholder {
+    color: rgba(146, 146, 146, 0.322);
+    font-size: 0.5em;
+    transition: 0.8s;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: rgba(146, 146, 146, 0.322);
+    font-size: 0.5em;
+    transition: 0.8s;
+}
+
+.registerForm button {
+    margin-top: 10px;
+    background-color: rgba(255, 0, 255, 0.644);
+    height: 40px;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s;
+}
+
+.registerForm button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 255);
+    transition: 0.5s;
+}

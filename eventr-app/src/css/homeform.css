@@ -1,0 +1,36 @@
+.formBackground {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    margin: 75px auto;
+    background-color: rgba(53, 53, 53, 0.464);
+    box-shadow: 1px 1px 9px black;
+}
+
+.switchLinks {
+    display: flex;
+    width: 100%;
+}
+
+.switchLinks a {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(32, 32, 32, 0.397);
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+}
+
+.switchLinks .activeLink {
+    background: none;
+  }
+
+  

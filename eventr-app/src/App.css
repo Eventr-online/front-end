@@ -1,0 +1,85 @@
+/* DEFAULT REACT SETTINGS */
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/* MAIN NAV */
+
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 72, 0, 0.644);
+}
+
+h1.eventrLogo {
+  margin-left: 40px;
+  color: white;
+  position: relative;
+  opacity: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
+  width: 30%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms
+}
+
+.fade-exit {
+  opacity: 1
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear
+}
+
+/* auto fill settings */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: whitesmoke !important;
+}
